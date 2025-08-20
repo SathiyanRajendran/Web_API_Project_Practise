@@ -2,11 +2,11 @@
 {
     public class Member
     {
-        public int Id { get; set; } // رقم العضو
-        public string Name { get; set; } // اسم العضو
-        public string Email { get; set; } // إيميل العضو
+        public int Id { get; set; } // Member Id
+        public string Name { get; set; } // Member Name
+        public string Email { get; set; } // Member Email
 
-        // علاقة One-to-Many مع الاستعارات
+        //  One-to-Many With Borrow
         public ICollection<Borrow>? Borrows { get; set; }
     }
 }

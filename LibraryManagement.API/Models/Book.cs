@@ -2,16 +2,16 @@
 {
     public class Book
     {
-        public int Id { get; set; } // رقم الكتاب - Book ID
-        public string Title { get; set; } // عنوان الكتاب - Title
-        public DateTime PublishedDate { get; set; } // تاريخ النشر - Published Date
-        public bool IsAvailable { get; set; } // متاح للاستعارة - Availability
+        public int Id { get; set; } //  Book ID
+        public string Title { get; set; } //  Title
+        public DateTime PublishedDate { get; set; } //  Published Date
+        public bool IsAvailable { get; set; } //  Availability
 
-        // مفتاح أجنبي - Foreign Key
+        //  Foreign Key
         public int AuthorId { get; set; }
         public Author? Author { get; set; }
 
-        // علاقة One-to-Many مع Borrow
+        //  One-to-Many With Borrow
         public ICollection<Borrow>? Borrows { get; set; }
     }
 }

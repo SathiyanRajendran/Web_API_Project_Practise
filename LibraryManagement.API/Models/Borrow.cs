@@ -6,23 +6,23 @@ namespace LibraryManagement.API.Models
     public class Borrow
     {
         [Key]
-        public int Id { get; set; } // رقم عملية الاستعارة - Borrow ID
+        public int Id { get; set; } //  Borrow ID
 
-        // علاقة مع Book
+        // Relation With Book
         [Required]
         [ForeignKey(nameof(Book))]
         public int BookId { get; set; }
-        public Book? Book { get; set; } // nullable
+        public Book? Book { get; set; } 
 
-        // علاقة مع Member
+        // Relation With Member
         [Required]
         [ForeignKey(nameof(Member))]
         public int MemberId { get; set; }
-        public Member? Member { get; set; } // nullable
+        public Member? Member { get; set; } 
 
         [Required]
-        public DateTime BorrowDate { get; set; } // تاريخ الاستعارة
+        public DateTime BorrowDate { get; set; } 
 
-        public DateTime? ReturnDate { get; set; } // تاريخ الإرجاع (nullable)
+        public DateTime? ReturnDate { get; set; } 
     }
 }
