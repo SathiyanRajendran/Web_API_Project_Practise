@@ -22,6 +22,7 @@ namespace LibraryManagement.API.Controllers
             _mapper = mapper;
         }
 
+        //Get Authors
         [HttpGet]
         public async Task<ActionResult<IEnumerable<AuthorDto>>> GetAuthors()
         {
